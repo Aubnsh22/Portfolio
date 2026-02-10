@@ -1,0 +1,565 @@
+<div class="hero-container" [style.background]="backgroundColor">
+  <!-- Cinematic & Architectural Background -->
+  <div class="hero-cinematic-bg" [style.opacity]="heroBgOpacity">
+    <div class="grain-overlay"></div>
+    <div class="architectural-grid"></div>
+    <canvas #heroCanvas class="hero-particles"></canvas>
+    <div class="viewfinder-corners">
+      <div class="corner top-left"></div>
+      <div class="corner top-right"></div>
+      <div class="corner bottom-left"></div>
+      <div class="corner bottom-right"></div>
+    </div>
+    <div class="parallax-glow"></div>
+  </div>
+
+  <div class="name-wrapper" #nameWrapper>
+    <div class="name-editorial">
+      <div class="first-name">Ayoub</div>
+      <div class="last-name">Nassih</div>
+    </div>
+
+    <div class="hero-info-minimal">
+      <div class="info-line"></div>
+      <h2 class="hero-headline-refined">Digital Transformation <span class="amp">&</span> AI Engineer</h2>
+      <div class="hero-actions-minimal">
+        <a href="Ayoub-Nassih-CV%20(2).pdf" download class="cv-btn-minimal">
+          <i class="fas fa-arrow-down-long"></i>
+          <span>GET RESUME</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="about-me-container" #aboutMeContainer>
+  <h1 class="about-me-title">ABOUT ME</h1>
+</div>
+
+<div class="zoom-container" #zoomContainer>
+  <img #portfolioImg src="portfolio.png" alt="Portfolio" class="portfolio-image" (click)="showPortfolioText()">
+
+  <div class="portfolio-text" #portfolioText>
+    <span class="word" [class.visible]="wordsVisible[0]">This</span>
+    <span class="word" [class.visible]="wordsVisible[1]">is</span>
+    <span class="word" [class.visible]="wordsVisible[2]">my</span>
+    <span class="word" [class.visible]="wordsVisible[3]">portfolio</span>
+  </div>
+
+  <div class="scroll-message" [class.visible]="showScrollMessage">
+    <div class="scroll-card">
+      <div class="scroll-icon">↓</div>
+      <h3>Keep Scrolling</h3>
+      <p>Dive into my story, explore my journey</p>
+    </div>
+  </div>
+</div>
+
+<div class="scroll-content" #scrollContent>
+  <div class="story-section" #storySection>
+    <!-- Architectural Grid for About Me -->
+    <div class="story-grid-overlay"></div>
+
+    <!-- Title removed to allow animated "ABOUT ME" to take its place -->
+
+    <div class="story-card" #storyCard>
+
+      <div class="card-content">
+        <h3>Full-Stack & AI Developer</h3>
+        <p>I'm Ayoub Nassih, a Full-Stack and AI Developer and an engineering student specializing in Digital
+          Transformation and Artificial Intelligence. I build intelligent, scalable applications that solve real-world
+          problems by combining software engineering, machine learning, and cloud technologies.</p>
+      </div>
+    </div>
+
+    <div class="story-card" #storyCard>
+
+      <div class="card-content">
+        <h3>Technical Expertise</h3>
+        <p>My work sits at the intersection of backend systems, modern frontends, and data-driven decision-making. I've
+          designed and deployed full-stack platforms powered by Machine Learning models, secure APIs, and responsive
+          user interfaces — from career and salary prediction systems to ERP modules, SaaS platforms, and smart
+          budgeting applications.</p>
+      </div>
+    </div>
+
+    <div class="story-card" #storyCard>
+
+      <div class="card-content">
+        <h3>Engineering Skills</h3>
+        <p>I have a strong academic foundation in Machine Learning and data analysis, with hands-on experience training
+          models on large, localized datasets and deploying them into production environments. On the engineering side,
+          I work comfortably with Laravel, Flask, Angular, React, Node.js, and Odoo, and I enjoy architecting clean
+          systems with role-based security, optimized databases, and scalable cloud integration.</p>
+      </div>
+    </div>
+
+    <div class="story-card" #storyCard>
+
+      <div class="card-content">
+        <h3>Problem Solver</h3>
+        <p>Beyond code, I'm deeply interested in innovation, digital products, and real business impact. I approach
+          projects with a problem-solver mindset, strong communication, and a focus on building solutions that are not
+          only technically solid but also intuitive and valuable to users.</p>
+      </div>
+    </div>
+
+    <div class="story-card" #storyCard>
+      <div class="card-content">
+        <h3>Creative Vision</h3>
+        <p>Outside of software development, I'm a cinematic photographer and videographer, which sharpens my eye for
+          design, storytelling, and user experience — skills that naturally influence how I design interfaces and
+          digital products.</p>
+      </div>
+    </div>
+
+    <div class="story-card" #storyCard>
+      <div class="card-content">
+        <h3>Looking Forward</h3>
+        <p>I'm currently seeking opportunities to contribute to ambitious, real-world projects, grow as an engineer, and
+          create technology that makes a meaningful difference.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="resume-section">
+    <div class="custom-wave">
+      <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+        <path
+          d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5,73.84-4.36,147.54,16.88,218.2,35.26,69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-32.82C989.49,25,1113,1.42,1200,0H0Z"
+          fill="#ffffff"></path>
+      </svg>
+    </div>
+    <h2 class="resume-title">MY RESUME</h2>
+
+    <div class="timeline">
+      <div class="timeline-line"></div>
+
+      <!-- Experience -->
+      <div class="timeline-item experience">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <span class="timeline-date">Jul 2025 – Aug 2025</span>
+            <span class="timeline-type">Experience</span>
+          </div>
+          <h3>Web Development Intern – CTPC</h3>
+          <p>Developed ProcureFlow, a web application for managing and streamlining internal purchase requests, using
+            modern web technologies and structured workflows.</p>
+        </div>
+      </div>
+
+      <!-- Education 1 -->
+      <div class="timeline-item education">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <span class="timeline-date">2022 – 2027</span>
+            <span class="timeline-type">Education</span>
+          </div>
+          <h3>Engineering Degree – AI & Digital Transformation</h3>
+          <p><strong>ENSA Al Hoceima</strong></p>
+          <p>Specialization in Software Engineering, Artificial Intelligence, Data Analysis, and Digital Transformation.
+          </p>
+        </div>
+      </div>
+
+      <!-- Education 2 -->
+      <div class="timeline-item education">
+        <div class="timeline-dot"></div>
+        <div class="timeline-content">
+          <div class="timeline-header">
+            <span class="timeline-date">2021 – 2022</span>
+            <span class="timeline-type">Education</span>
+          </div>
+          <h3>Baccalaureate Degree</h3>
+          <p>Lycée Ibnou chohaid</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="projects-section">
+    <!-- Premium Background Effects -->
+    <div class="projects-bg-glow glow-1"></div>
+    <div class="projects-bg-glow glow-2"></div>
+
+    <h2 class="section-title">MY PROJECTS</h2>
+
+    <div class="carousel-container">
+      <div class="carousel-track" #carouselTrack (mousedown)="onDragStart($event)" (mousemove)="onDrag($event)"
+        (mouseup)="onDragEnd()" (mouseleave)="onDragEnd()" (touchstart)="onDragStart($event)"
+        (touchmove)="onDrag($event)" (touchend)="onDragEnd()">
+
+        <div class="project-card" [class.center-active]="currentIndex === 0" [style.transform]="getCardTransform(0)"
+          [style.opacity]="getCardOpacity(0)" [style.filter]="getCardBlur(0)">
+          <div class="card-inner">
+            <div class="card-glow"></div>
+            <div class="project-accent"></div>
+            <div class="project-image">
+              <img src="aub.jpg" alt="Procurement Management System">
+            </div>
+            <div class="project-info">
+              <div class="project-icon-box">
+                <i class="fab fa-laravel text-white"></i>
+              </div>
+              <h3>Procurement Management System</h3>
+              <p>Enterprise-grade purchase request system with a complex 6-role approval workflow and automated
+                lifecycle
+                management.</p>
+              <div class="project-tech">
+                <span>Laravel</span>
+                <span>PHP</span>
+                <span>MySQL</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="github-link"><i class="fab fa-github"></i> GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" [class.center-active]="currentIndex === 1" [style.transform]="getCardTransform(1)"
+          [style.opacity]="getCardOpacity(1)" [style.filter]="getCardBlur(1)">
+          <div class="card-inner">
+            <div class="card-glow"></div>
+            <div class="project-accent"></div>
+            <div class="project-image">
+              <img src="aub.jpg" alt="Career2Life">
+            </div>
+            <div class="project-info">
+              <div class="project-icon-box">
+                <i class="fab fa-angular text-white"></i>
+              </div>
+              <h3>Career2Life — AI Career Platform</h3>
+              <p>AI-driven platform predicting salaries and market trends in Morocco using advanced Gradient Boosting
+                models.</p>
+              <div class="project-tech">
+                <span>Angular</span>
+                <span>Flask</span>
+                <span>scikit-learn</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="github-link"><i class="fab fa-github"></i> GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" [class.center-active]="currentIndex === 2" [style.transform]="getCardTransform(2)"
+          [style.opacity]="getCardOpacity(2)" [style.filter]="getCardBlur(2)">
+          <div class="card-inner">
+            <div class="card-glow"></div>
+            <div class="project-accent"></div>
+            <div class="project-image">
+              <img src="aub.jpg" alt="Hotel Reservation System">
+            </div>
+            <div class="project-info">
+              <div class="project-icon-box">
+                <i class="fas fa-hotel text-white"></i>
+              </div>
+              <h3>Hotel Odoo ERP Addon</h3>
+              <p>Custom Odoo ERP module for hotel management, featuring room synch, automated bookings, and portal
+                integration.</p>
+              <div class="project-tech">
+                <span>Python</span>
+                <span>Odoo</span>
+                <span>PostgreSQL</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="github-link"><i class="fab fa-github"></i> GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" [class.center-active]="currentIndex === 3" [style.transform]="getCardTransform(3)"
+          [style.opacity]="getCardOpacity(3)" [style.filter]="getCardBlur(3)">
+          <div class="card-inner">
+            <div class="card-glow"></div>
+            <div class="project-accent"></div>
+            <div class="project-image">
+              <img src="aub.jpg" alt="BudgetChefV2">
+            </div>
+            <div class="project-info">
+              <div class="project-icon-box">
+                <i class="fas fa-utensils text-white"></i>
+              </div>
+              <h3>BudgetChefV2 — RL Planner</h3>
+              <p>Advanced nutrition app using Reinforcement Learning to adapt meal plans based on user budget and
+                behavior.</p>
+              <div class="project-tech">
+                <span>React</span>
+                <span>Flask</span>
+                <span>AI</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="github-link"><i class="fab fa-github"></i> GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-card" [class.center-active]="currentIndex === 4" [style.transform]="getCardTransform(4)"
+          [style.opacity]="getCardOpacity(4)" [style.filter]="getCardBlur(4)">
+          <div class="card-inner">
+            <div class="card-glow"></div>
+            <div class="project-accent"></div>
+            <div class="project-image">
+              <img src="aub.jpg" alt="AloDoctor">
+            </div>
+            <div class="project-info">
+              <div class="project-icon-box">
+                <i class="fas fa-user-md text-white"></i>
+              </div>
+              <h3>AloDoctor — Medical SaaS</h3>
+              <p>B2B SaaS for medical cabinets with multilingual AI chatbot and secure automated WhatsApp communication.
+              </p>
+              <div class="project-tech">
+                <span>Node.js</span>
+                <span>Next.js</span>
+                <span>WhatsApp</span>
+              </div>
+              <div class="project-links">
+                <a href="#" class="github-link"><i class="fab fa-github"></i> GitHub</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Navigation Arrows -->
+      <button class="nav-btn prev" (click)="prev()">
+        <i class="fas fa-chevron-left"></i>
+      </button>
+      <button class="nav-btn next" (click)="next()">
+        <i class="fas fa-chevron-right"></i>
+      </button>
+    </div>
+  </div>
+
+  <div class="skills-section">
+    <!-- Premium Background Effects -->
+    <div class="skills-bg-glow glow-1"></div>
+    <div class="skills-bg-glow glow-2"></div>
+    <div class="skills-mesh"></div>
+
+    <h2 class="section-title">MY ARSENAL</h2>
+
+    <div class="skills-grid">
+      <!-- AI & Machine Learning - Large Card -->
+      <div class="skill-card ai-card">
+        <div class="card-glow"></div>
+        <div class="skill-header">
+          <div class="skill-icon-box">
+            <i class="fas fa-brain"></i>
+          </div>
+          <h3>AI & Machine Learning</h3>
+        </div>
+        <p>Expertise in classical algorithms, neural networks, and optimization techniques. Solid foundation in model
+          evaluation and fine-tuning.</p>
+        <div class="tech-tags">
+          <span class="tag-ai">Neural Networks</span>
+          <span class="tag-ai">Regression</span>
+          <span class="tag-ai">Optimization</span>
+          <span class="tag-ai">Data Math</span>
+        </div>
+      </div>
+
+      <!-- Web Development - Wide Card -->
+      <div class="skill-card web-card">
+        <div class="card-glow"></div>
+        <div class="skill-header">
+          <div class="skill-icon-box">
+            <i class="fas fa-code"></i>
+          </div>
+          <h3>Web Systems</h3>
+        </div>
+        <p>Building scalable web architectures using modern frameworks and responsive design principles.</p>
+        <div class="tech-tags">
+          <span class="tag-web">Laravel</span>
+          <span class="tag-web">Angular</span>
+          <span class="tag-web">Tailwind</span>
+          <span class="tag-web">REST APIs</span>
+        </div>
+      </div>
+
+      <!-- Programming Languages -->
+      <div class="skill-card lang-card">
+        <div class="card-glow"></div>
+        <div class="skill-header">
+          <div class="skill-icon-box">
+            <i class="fas fa-terminal"></i>
+          </div>
+          <h3>Programming</h3>
+        </div>
+        <div class="lang-grid">
+          <div class="lang-item" title="C Language"><i class="fas fa-file-code"></i> <span>C</span></div>
+          <div class="lang-item" title="Python"><i class="fab fa-python"></i> <span>Python</span></div>
+          <div class="lang-item" title="Java"><i class="fab fa-java"></i> <span>Java</span></div>
+          <div class="lang-item" title="PHP"><i class="fab fa-php"></i> <span>PHP</span></div>
+          <div class="lang-item" title="TypeScript/JS"><i class="fab fa-js"></i> <span>TS/JS</span></div>
+        </div>
+      </div>
+
+      <!-- Mobile Development -->
+      <div class="skill-card mobile-card">
+        <div class="card-glow"></div>
+        <div class="skill-header">
+          <div class="skill-icon-box">
+            <i class="fas fa-mobile-alt"></i>
+          </div>
+          <h3>Mobile Apps</h3>
+        </div>
+        <p>Cross-platform deployment for iOS and Android with a focus on UX/UI performance.</p>
+        <div class="tech-tags">
+          <span class="tag-mobile"><i class="fab fa-angular"></i> Ionic</span>
+          <span class="tag-mobile"><i class="fas fa-layer-group"></i> Hybrid</span>
+        </div>
+      </div>
+
+      <!-- Cloud & IoT -->
+      <div class="skill-card cloud-card">
+        <div class="card-glow"></div>
+        <div class="skill-header">
+          <div class="skill-icon-box">
+            <i class="fab fa-microsoft"></i>
+          </div>
+          <h3>Cloud & IoT</h3>
+        </div>
+        <p>Microsoft Azure Fundamentals: IoT Hub, device messaging, and resource orchestration.</p>
+        <div class="tech-tags">
+          <span class="tag-cloud">Azure</span>
+          <span class="tag-cloud">IoT Hub</span>
+          <span class="tag-cloud">Edge</span>
+        </div>
+      </div>
+
+      <!-- Tools & DevOps -->
+      <div class="skill-card tools-card">
+        <div class="card-glow"></div>
+        <div class="skill-header">
+          <div class="skill-icon-box">
+            <i class="fas fa-tools"></i>
+          </div>
+          <h3>DevOps & Tools</h3>
+        </div>
+        <div class="tech-tags">
+          <span class="tag-tools"><i class="fab fa-docker"></i> Docker</span>
+          <span class="tag-tools"><i class="fab fa-git-alt"></i> Git</span>
+          <span class="tag-tools"><i class="fab fa-github"></i> GitHub</span>
+          <span class="tag-tools"><i class="fas fa-vial"></i> Testing</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="contact-section">
+    <!-- Floating Background Elements -->
+    <div class="bg-bubble bubble-1"></div>
+    <div class="bg-bubble bubble-2"></div>
+    <div class="bg-bubble bubble-3"></div>
+
+    <h2 class="section-title">LET'S CONNECT</h2>
+
+    <div class="contact-container">
+      <!-- Left Side: Interactive Info -->
+      <div class="contact-info-panel">
+        <div class="panel-header">
+          <h3>Have a Project in Mind?</h3>
+          <p>I'm currently available for freelance work and full-time opportunities. Let's build something amazing
+            together.</p>
+        </div>
+
+        <div class="contact-methods">
+          <!-- Email Card -->
+          <div class="method-card">
+            <div class="method-icon"><i class="fas fa-envelope"></i></div>
+            <div class="method-content">
+              <label>Email Me</label>
+              <div class="copy-box">
+                <span class="value">ayoubnassih2003&#64;gmail.com</span>
+                <button class="copy-btn" (click)="copyToClipboard('ayoubnassih2003@gmail.com', 'email')"
+                  title="Copy Email">
+                  <i class="fas" [class.fa-copy]="!showEmailTooltip" [class.fa-check]="showEmailTooltip"></i>
+                  <span class="tooltip" [class.visible]="showEmailTooltip">Copied!</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phone Card -->
+          <div class="method-card">
+            <div class="method-icon"><i class="fas fa-phone-alt"></i></div>
+            <div class="method-content">
+              <label>Call Me</label>
+              <div class="copy-box">
+                <span class="value">+212 684 808 338</span>
+                <button class="copy-btn" (click)="copyToClipboard('0684808338', 'phone')" title="Copy Phone">
+                  <i class="fas" [class.fa-copy]="!showPhoneTooltip" [class.fa-check]="showPhoneTooltip"></i>
+                  <span class="tooltip" [class.visible]="showPhoneTooltip">Copied!</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="social-panel">
+          <h4>Social Media</h4>
+          <div class="social-buttons">
+            <a href="https://www.linkedin.com/in/ayoub-nassih-1a6487332/" target="_blank" class="social-link linkedin">
+              <i class="fab fa-linkedin-in"></i>
+              <span>LinkedIn</span>
+            </a>
+            <a href="https://www.instagram.com/nsh_aub/" target="_blank" class="social-link instagram">
+              <i class="fab fa-instagram"></i>
+              <span>Instagram</span>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Side: Premium Form -->
+      <div class="contact-form-panel">
+        <form action="https://formspree.io/f/xjgekllk" method="POST" class="premium-form">
+          <div class="form-row">
+            <div class="input-group">
+              <input type="text" name="name" id="name" required placeholder=" ">
+              <label for="name">Your Name</label>
+              <div class="bar"></div>
+            </div>
+            <div class="input-group">
+              <input type="email" name="email" id="email" required placeholder=" ">
+              <label for="email">Email Address</label>
+              <div class="bar"></div>
+            </div>
+          </div>
+
+          <div class="input-group">
+            <input type="text" name="subject" id="subject" required placeholder=" ">
+            <label for="subject">Subject</label>
+            <div class="bar"></div>
+          </div>
+
+          <div class="input-group">
+            <textarea name="message" id="message" rows="5" required placeholder=" "></textarea>
+            <label for="message">Your Message</label>
+            <div class="bar"></div>
+          </div>
+
+          <button type="submit" class="submit-button">
+            <span class="btn-text">Send Message</span>
+            <div class="btn-icon">
+              <i class="fas fa-paper-plane"></i>
+            </div>
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="portfolio-footer">
+  <p>&copy; 2026 Designed & Developed by Ayoub Nassih. All rights reserved.</p>
+</footer>
